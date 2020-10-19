@@ -3,6 +3,10 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
+  url: "http://localhost:8080",
+  Consulta: "/api/list",
+  Nuevo: "/api/nuevo",
+  Actualizar: "/api/actualizar/{id}",
   production: false
 };
 

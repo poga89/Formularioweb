@@ -1,0 +1,43 @@
+<div class="container">
+  <!-- Content here -->
+<div class="col col-sm-6">
+
+    <div class="alert alert-primary" role="alert">
+     Formulario.
+    </div>
+
+
+    <form [formGroup]="registerForm" (ngSubmit)="create()">
+      
+        <div class="form-group">
+          <input type="text" formControlName="nombre" class="form-control" id="nombre"
+            placeholder="Nombre" [ngClass]="{ 'is-invalid': submitted && f.nombre.errors }">
+          <div *ngIf="submitted && f.nombre.errors" class="invalid-feedback">
+            <div *ngIf="f.nombre.errors.required">Nombre es requerido</div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <input type="text" formControlName="apellido" class="form-control" id="apellido"
+            placeholder="apellido" [ngClass]="{ 'is-invalid': submitted && f.apellido.errors }">
+          <div *ngIf="submitted && f.apellido.errors" class="invalid-feedback">
+            <div *ngIf="f.apellido.errors.required">Apellido es requerido</div>
+          </div>
+        </div>
+
+  
+      <div class="col">
+        <input type="hidden" class="form-control"  formControlName="procesado" id="procesado" value="false">
+      </div>
+    
+      <div class="form-group">
+
+        <button class="btn btn-primary">Registrate</button>
+      </div>
+  </form>
+  </div> 
+</div>
+
+  
+
+
